@@ -5,6 +5,7 @@
 #include "drv_bl_shared.h"
 #include "drv_cse7766.h"
 #include "drv_ir.h"
+#include "drv_ir_esp32.h"
 #include "drv_local.h"
 #include "drv_ntp.h"
 #include "drv_public.h"
@@ -327,6 +328,13 @@ static driver_t g_drivers[] = {
 	//drvdetail:"descr":"simple IR2 driver for sending captures from flipper zero",
 	//drvdetail:"requires":""}
 	{ "IR2",			DRV_IR2_Init,		 NULL,						NULL, NULL, NULL, NULL, NULL, false },
+#endif
+#if ENABLE_DRIVER_ESPIR
+	//drvdetail:{"name":"ESPIR",
+	//drvdetail:"title":"TODO",
+	//drvdetail:"descr":"TODO",
+	//drvdetail:"requires":""}
+	{ "IR",			ESPIR_Init,		 NULL,						NULL, ESPIR_RunFrame, NULL, NULL, NULL, false },
 #endif
 
 #if ENABLE_DRIVER_DDPSEND
