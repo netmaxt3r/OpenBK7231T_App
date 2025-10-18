@@ -393,6 +393,7 @@
 #define ENABLE_DRIVER_CHARTS					1
 #define ENABLE_EXPAND_CONSTANT					1
 #define ENABLE_DRIVER_HUE						1
+#define ENABLE_DRIVER_I2C						1
 #define ENABLE_DRIVER_ESPIR						1
 #define ENABLE_DRIVER_WEMO						1
 #define ENABLE_DRIVER_BL0937					1

@@ -26,6 +26,7 @@ set(OBKM_SRC
 	${OBK_SRCS}hal/generic/hal_flashConfig_generic.c
 	${OBK_SRCS}hal/generic/hal_flashVars_generic.c
 	${OBK_SRCS}hal/generic/hal_generic.c
+	${OBK_SRCS}hal/generic/hal_i2c_generic.c
 	${OBK_SRCS}hal/generic/hal_main_generic.c
 	${OBK_SRCS}hal/generic/hal_pins_generic.c
 	${OBK_SRCS}hal/generic/hal_wifi_generic.c
@@ -89,6 +90,7 @@ set(OBKM_SRC
 	${OBK_SRCS}driver/drv_httpButtons.c
 	${OBK_SRCS}driver/drv_hue.c
 	${OBK_SRCS}driver/drv_ir2.c
+	${OBK_SRCS}driver/drv_i2c.c
 	${OBK_SRCS}driver/drv_ir_esp32.c
 	${OBK_SRCS}driver/drv_kp18058.c
 	${OBK_SRCS}driver/drv_kp18068.c

@@ -17,6 +17,7 @@
 #include "drv_ds1820_full.h"
 #include "drv_ds1820_common.h"
 #include "drv_hlw8112.h"
+#include "drv_i2c.h"
 
 
 typedef struct driver_s {
@@ -575,6 +576,13 @@ static driver_t g_drivers[] = {
 	//drvdetail:"descr":"TXW81X Camera.",
 	//drvdetail:"requires":""}
 	{ "TXWCAM", TXW_Cam_Init, TXW_Cam_RunEverySecond, NULL, NULL, NULL, NULL, NULL, false }
+#endif
+#if ENABLE_DRIVER_I2C
+	//drvdetail:{"name":"I2C",
+	//drvdetail:"title":"TODO",
+	//drvdetail:"descr":"TXW81X I2C.",
+	//drvdetail:"requires":""}
+	{ "ESPI2C", I2C_Init, NULL, NULL, NULL, NULL, NULL, NULL, false }
 #endif
 };
 

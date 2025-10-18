@@ -15,9 +15,11 @@ set(PROJ_ALL_SRC
 	${OBK_SRCS}hal/espidf/hal_wifi_espidf.c
 	${OBK_SRCS}hal/espidf/hal_uart_espidf.c
 	${OBK_SRCS}hal/espidf/hal_ota_espidf.c
+	${OBK_SRCS}hal/espidf/hal_i2c_espidf.c
 	${OBKM_SRC}
 	${BERRY_SRC_C}
 	../../../libraries/mqtt_patched.c
 )
 idf_component_register(SRCS ${PROJ_ALL_SRC} WHOLE_ARCHIVE
-			PRIV_REQUIRES mqtt lwip esp_wifi nvs_flash esp_driver_tsens esp_driver_gpio esp_pm esp_partition app_update esp_adc esp_driver_uart esp_driver_ledc spi_flash esp_driver_spi esp_driver_rmt)
+			PRIV_REQUIRES mqtt lwip esp_wifi nvs_flash esp_driver_tsens esp_driver_gpio esp_pm esp_partition app_update esp_adc esp_driver_uart esp_driver_ledc spi_flash
+			esp_driver_spi esp_driver_rmt esp_driver_i2c)
